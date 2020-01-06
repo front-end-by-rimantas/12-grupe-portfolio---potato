@@ -10,7 +10,7 @@ This project is for educational porpuses only. Pull request are welcome, but pri
 
 Site published at https://front-end-by-rimantas.github.io/12-grupe-portfolio-potato/index.html
 
-Design: [potato template](http://adhyasoft.com/themeforest/potato/potato/index-01.html)
+Design: [potato template](https://www.themetrading.net/html/potato/design-1/index.html)
 
 ### Authors
-[Gabrielius](https://github.com/belauzas), [Vitoldas](https://github.com/belauzas), [Vytautas](https://github.com/belauzas)
+[Gabrielius](https://github.com/Gabrieliusv), [Vitoldas](https://github.com/Vito-lab), [Vytautas](https://github.com/varveklis6)
