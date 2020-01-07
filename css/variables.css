@@ -1,8 +1,6 @@
 :root {
-  --primary-color: #90acd1;
-  --primary-color-anti: #fff;
-  --primary-light-color: #f9f9ff;
-  --primary-light-color-anti: #333;
-  --secondary-color: #e45447;
-  --secondary-color-anti: #fff;
+  --primary-color:  linear-gradient(to right, #22eea7 0%, #2ccfe2 100%) 
+  --primary-color-anti: #151515;
+  --secondary-color: #f8f8f8;
+  --secondary-color-anti: #151515;
 }
