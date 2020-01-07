@@ -34,7 +34,14 @@
 }
 
 .container > .row {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 1200px;
   margin: 10px calc(50% - 600px);
 }
@@ -208,6 +215,11 @@
 
 .container > .row > .m-r-12 {
   margin-right: var(--m12);
+}
+
+.container > .row > .m-v {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1300px) {

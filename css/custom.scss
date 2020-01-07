@@ -1,10 +1,14 @@
 .bg-primary {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--primary-color-anti);
 }
 .bg-secondary {
   background-color: var(--secondary-color);
   color: var(--secondary-color-anti);
+}
+.bg-test {
+  background-color: green;
+  height: 60px;
 }
 
 .text-center {

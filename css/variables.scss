@@ -1,7 +1,11 @@
 :root {
-    --primary-color:  linear-gradient(to right, #22eea7 0%, #2ccfe2 100%) 
-    --primary-color-anti: #151515;
-    
-    --secondary-color: #f8f8f8;
-    --secondary-color-anti: #151515;
+  --primary-color: linear-gradient(
+    90deg,
+    rgba(34, 238, 167, 1) 0%,
+    rgba(44, 207, 226, 1) 100%
+  );
+  --primary-color-anti: #151515;
+
+  --secondary-color: #f8f8f8;
+  --secondary-color-anti: #151515;
 }
