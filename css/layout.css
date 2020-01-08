@@ -28,7 +28,6 @@
 }
 
 .container {
-  display: inline-block;
   width: 100%;
   padding: 80px 0;
 }
@@ -58,9 +57,7 @@
 .container > .row > .col-10,
 .container > .row > .col-11,
 .container > .row > .col-12 {
-  display: inline-block;
   min-height: 1px;
-  float: left;
   margin-left: var(--gap);
   margin-right: var(--gap);
 }

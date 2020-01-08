@@ -29,7 +29,6 @@
 }
 
 .container {
-  display: inline-block;
   width: 100%;
   padding: 80px 0;
 
@@ -52,9 +51,7 @@
     > .col-10,
     > .col-11,
     > .col-12 {
-      display: inline-block;
       min-height: 1px;
-      float: left;
       margin-left: var(--gap);
       margin-right: var(--gap);
     }
