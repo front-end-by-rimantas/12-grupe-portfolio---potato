@@ -86,3 +86,7 @@ h5.no-decoration::before, h5.no-decoration::after {
 #about_me img {
   width: 100%;
 }
+
+.fac-img {
+  width: 100%;
+}
