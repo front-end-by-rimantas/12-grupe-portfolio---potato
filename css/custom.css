@@ -1,11 +1,88 @@
 .bg-primary {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
+  color: var(--primary-color-anti);
 }
 
 .bg-secondary {
   background-color: var(--secondary-color);
+  color: var(--secondary-color-anti);
 }
 
-.bg-primary-light {
-  background-color: var(--primary-light-color);
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.color-primary {
+  color: var(--primary-text-color);
+}
+
+.color-secondary {
+  color: var(--secondary-text-color);
+}
+
+p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--primary-text-color);
+  position: relative;
+}
+
+h5::before {
+  display: border-box;
+  content: "";
+  background-color: #00c07c;
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  top: 50%;
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+}
+
+h5::after {
+  display: border-box;
+  content: "";
+  background-color: #00c07c;
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  top: 50%;
+  -webkit-transform: translate(25px);
+          transform: translate(25px);
+}
+
+h5.no-decoration::before, h5.no-decoration::after {
+  display: none;
+}
+
+.bg-secondary ::before,
+.bg-secondary ::after {
+  background-color: var(--secondary-color-anti);
+}
+
+#about_me img {
+  width: 100%;
 }
