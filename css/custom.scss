@@ -98,8 +98,17 @@ h5 {
 // clients
 
 // about me
-#about_me img {
-  width: 100%;
+#about_me {
+  img {
+    width: 100%;
+  }
+
+  ul > li {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0px;
+    border-bottom: 1px solid;
+  }
 }
 
 // achievements
@@ -150,26 +159,24 @@ form > textarea {
   transition: border-color 0.2s ease-in-out;
 }
 // footer
-  .socials{
-    display: inline-block;
-  }
-  .socials > .fa{
-    display:inline-block;
-    margin-top: 20px;
-    font-size: 20px; 
-      
-  }
+.socials {
+  display: inline-block;
+}
+.socials > .fa {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 20px;
+}
 .container.bg-primary {
   padding: 6px 0;
   font-size: 40px;
 }
-  .container.bg-primary p {
-    line-height: 30px;
-    font-size: 18px;
-    color: black;
-
-  }
-  .wt {
-    color: white;
-    text-decoration: none;
-  }
+.container.bg-primary p {
+  line-height: 30px;
+  font-size: 18px;
+  color: black;
+}
+.wt {
+  color: white;
+  text-decoration: none;
+}
