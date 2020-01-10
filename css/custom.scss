@@ -147,3 +147,26 @@ form > textarea {
   transition: border-color 0.2s ease-in-out;
 }
 // footer
+  .socials{
+    display: inline-block;
+  }
+  .socials > .fa{
+    display:inline-block;
+    margin-top: 20px;
+    font-size: 20px; 
+      
+  }
+.container.bg-primary {
+  padding: 6px 0;
+  font-size: 40px;
+}
+  .container.bg-primary p {
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+
+  }
+  .wt {
+    color: white;
+    text-decoration: none;
+  }
