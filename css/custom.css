@@ -78,9 +78,8 @@ h5.no-decoration::before, h5.no-decoration::after {
   display: none;
 }
 
-.bg-secondary ::before,
-.bg-secondary ::after {
-  background-color: var(--secondary-color-anti);
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 #about_me img {
@@ -91,13 +90,71 @@ h5.no-decoration::before, h5.no-decoration::after {
   width: 100%;
 }
 
+.contact-title {
+  max-width: 500px;
+}
+
+.contact-img {
+  width: 100%;
+}
+
+.form-input {
+  font-size: 13px;
+  line-height: 36px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  border: none;
+  border: 1px solid #ced4da;
+  outline: none;
+}
+
+form > textarea {
+  resize: none;
+  width: 100%;
+}
+
+.form-input:focus {
+  border: 1px solid var(--secondary-text-color);
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
+}
+
 .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials > a {
   display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-text-color);
+  border: solid 2px var(--primary-text-color);
+  border-radius: 50px;
+}
+
+.socials > a:hover {
+  color: var(--primary-text-color);
+  background-color: white;
+  border: solid 2px var(--primary-text-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .socials > .fa {
   display: inline-block;
-  margin-top: 20px;
   font-size: 20px;
 }
 
