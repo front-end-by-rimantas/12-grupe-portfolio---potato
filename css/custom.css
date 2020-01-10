@@ -83,6 +83,10 @@ h5.no-decoration::before, h5.no-decoration::after {
   background-color: var(--secondary-color-anti);
 }
 
+.mb-30 {
+  margin-bottom: 30px;
+}
+
 #about_me img {
   width: 100%;
 }
@@ -90,6 +94,7 @@ h5.no-decoration::before, h5.no-decoration::after {
 .fac-img {
   width: 100%;
 }
+
 
 .socials {
   display: inline-block;
@@ -115,4 +120,34 @@ h5.no-decoration::before, h5.no-decoration::after {
 .wt {
   color: white;
   text-decoration: none;
+}
+.contact-title {
+  max-width: 500px;
+}
+
+.contact-img {
+  width: 100%;
+}
+
+.form-input {
+  font-size: 13px;
+  line-height: 36px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  border: none;
+  border: 1px solid #ced4da;
+  outline: none;
+}
+
+form > textarea {
+  resize: none;
+  width: 100%;
+}
+
+.form-input:focus {
+  border: 1px solid var(--secondary-text-color);
+  -webkit-transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease-in-out;
 }
