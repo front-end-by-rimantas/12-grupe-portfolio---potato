@@ -91,6 +91,10 @@ h5.no-decoration::before, h5.no-decoration::after {
   width: 100%;
 }
 
+.fac-img {
+  width: 100%;
+}
+
 .contact-title {
   max-width: 500px;
 }
