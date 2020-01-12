@@ -7,7 +7,7 @@
 
 .block > .icon-container {
   position: relative;
-  height: 100px;
+  height: 102px;
 }
 
 .block > .icon-container > .circle {
@@ -41,14 +41,13 @@
           animation-play-state: running;
 }
 
-.block > .icon-container > .fa {
+.block > .icon-container > img {
   position: absolute;
-  left: 0;
-  right: 0;
+  right: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 35px;
+  width: 45px;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   color: var(--primary-text-color);
 }
 

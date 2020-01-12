@@ -20,7 +20,7 @@ function renderServices(target, data) {
             <div class="circle">
               <div class="dot"></div>
             </div>
-            <i class="fa fa-${service.icon}"></i>
+            <img src="../img/services/${service.icon}.svg" alt="${service.title}">
           </div>
           <h4 class="mv-20">${service.title}</h4>
           <p class="color-secondary">${service.description}</p>

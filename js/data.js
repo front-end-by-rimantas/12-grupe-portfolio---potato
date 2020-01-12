@@ -2,37 +2,37 @@
 // Services
 const services = [
   {
-    icon: "object-ungroup",
+    icon: "design",
     title: "Graphic Design",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
   },
   {
-    icon: "object-ungroup",
+    icon: "3d",
     title: "3D Motion",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
   },
   {
-    icon: "object-ungroup",
+    icon: "ux",
     title: "Web Design",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
   },
   {
-    icon: "object-ungroup",
+    icon: "data",
     title: "Web Development",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
   },
   {
-    icon: "object-ungroup",
+    icon: "camera",
     title: "Photography",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
   },
   {
-    icon: "object-ungroup",
+    icon: "film",
     title: "Video Editing",
     description:
       "Fames urna class volutpat malesuad cubilia ornare maecenas fermentum conub gravida purus."
