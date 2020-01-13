@@ -35,6 +35,11 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
 h4 {
   font-size: 21px;
   line-height: 32px;
@@ -185,13 +190,14 @@ form > textarea {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  height: 75px;
 
   > a {
     display: inline-block;
     font-size: 16px;
     height: 50px;
     width: 50px;
-    margin-left: 4px;
+    margin-right: 4px;
     color: white;
     text-align: center;
     padding: 15px;
@@ -209,7 +215,7 @@ form > textarea {
 
 .socials > .fa {
   display: inline-block;
-  font-size: 20px;
+
 }
 
 .container.bg-primary {
@@ -225,3 +231,9 @@ form > textarea {
   color: white;
   text-decoration: none;
 }
+
+.padding{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
