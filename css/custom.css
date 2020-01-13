@@ -45,7 +45,7 @@ h3 {
 h4 {
   font-size: 21px;
   line-height: 32px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 h5 {
@@ -85,6 +85,11 @@ h5.no-decoration::before, h5.no-decoration::after {
   display: none;
 }
 
+.mv-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .mb-15 {
   margin-bottom: 15px;
 }
@@ -95,6 +100,10 @@ h5.no-decoration::before, h5.no-decoration::after {
 
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
 }
 
 #about_me img {
