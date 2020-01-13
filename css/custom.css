@@ -146,16 +146,16 @@ h5.no-decoration::before, h5.no-decoration::after {
   }
 }
 
-.fac-img {
+.facts-img {
   width: 100%;
 }
 
-.bar-backgr {
+.progres-br {
   background-image: url(/img/dot.png);
   background-repeat: repeat;
 }
 
-.pbar {
+.progres-br .progr-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,7 +170,7 @@ h5.no-decoration::before, h5.no-decoration::after {
   border-radius: 50px;
 }
 
-.pbnumb {
+.progres-br .progres-numbr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,6 +188,11 @@ h5.no-decoration::before, h5.no-decoration::after {
   border-radius: 50px;
   margin-left: 10px;
   margin-right: 20px;
+  font-weight: 600;
+}
+
+.progres-br .no-decoration {
+  color: var(--primary-color-anti);
 }
 
 .contact-title {

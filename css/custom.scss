@@ -150,15 +150,16 @@ h5 {
 // achievements
 
 // Important facts
-
-.fac-img {
+.facts-img {
   width: 100%;
 }
-.bar-backgr {
+// preogresss bariukas
+.progres-br {
+
   background-image: url(/img/dot.png);
   background-repeat: repeat;
-}
-.pbar {
+
+.progr-bar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -167,7 +168,7 @@ h5 {
   height: 80px;
   border-radius: 50px;
 }
-.pbnumb {
+.progres-numbr {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -178,6 +179,11 @@ h5 {
   border-radius: 50px;
   margin-left: 10px;
   margin-right: 20px;
+  font-weight: 600;
+  }
+  .no-decoration{
+    color: var(--primary-color-anti);
+  }
 }
 // skills
 
