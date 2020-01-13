@@ -154,6 +154,31 @@ h5 {
 .fac-img {
   width: 100%;
 }
+.bar-backgr {
+  background-image: url(/img/dot.png);
+  background-repeat: repeat;
+}
+.pbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 500;
+  line-height: 60px;
+  height: 80px;
+  border-radius: 50px;
+}
+.pbnumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
 // skills
 
 // gallery
@@ -196,53 +221,60 @@ form > textarea {
 }
 // footer
 .socials {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  height: 75px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .socials-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 75px;
 
-  > a {
+    > a {
+      display: inline-block;
+      font-size: 16px;
+      height: 50px;
+      width: 50px;
+      margin-right: 4px;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      background-color: var(--primary-text-color);
+      border: solid 2px var(--primary-text-color);
+      border-radius: 50px;
+    }
+    > a:hover {
+      color: var(--primary-text-color);
+      background-color: white;
+      border: solid 2px var(--primary-text-color);
+      transition: 0.4s;
+    }
+  }
+  .fa {
     display: inline-block;
-    font-size: 16px;
-    height: 50px;
-    width: 50px;
-    margin-right: 4px;
+  }
+
+  @media (max-width: 1100px) {
+    .col-md-6{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .container.bg-primary {
+    padding: 6px 0;
+    font-size: 40px;
+  }
+  .container.bg-primary p {
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+  }
+  .wt {
     color: white;
-    text-align: center;
-    padding: 15px;
-    background-color: var(--primary-text-color);
-    border: solid 2px var(--primary-text-color);
-    border-radius: 50px;
-  }
-  > a:hover {
-    color: var(--primary-text-color);
-    background-color: white;
-    border: solid 2px var(--primary-text-color);
-    transition: 0.4s;
+    text-decoration: none;
   }
 }
-
-.socials > .fa {
-  display: inline-block;
-
-}
-
-.container.bg-primary {
-  padding: 6px 0;
-  font-size: 40px;
-}
-.container.bg-primary p {
-  line-height: 30px;
-  font-size: 18px;
-  color: black;
-}
-.wt {
-  color: white;
-  text-decoration: none;
-}
-
-.padding{
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
