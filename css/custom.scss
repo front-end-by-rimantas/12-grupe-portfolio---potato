@@ -22,7 +22,9 @@
 .color-secondary {
   color: var(--secondary-text-color);
 }
+
 p {
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 28px;
 }
@@ -36,7 +38,7 @@ h2 {
 h4 {
   font-size: 21px;
   line-height: 32px;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 h5 {
@@ -75,13 +77,26 @@ h5 {
   }
 }
 
-.bg-secondary {
-  ::before,
-  ::after {
-    background-color: var(--secondary-color-anti);
-  }
+.mv-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
 // header
 
 // hero
@@ -153,12 +168,51 @@ h5 {
 // clients
 
 // about me
-#about_me img {
-  width: 100%;
+#about_me {
+  img {
+    width: 100%;
+  }
+
+  ul > li {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0px;
+    line-height: 28px;
+    font-size: 16px;
+    color: var(--secondary-text-color);
+    border-bottom: 1px solid #f0f0f0;
+  }
+  span {
+    display: inline-block;
+    width: 80px;
+    color: var(--primary-color-anti);
+  }
+
+  .actions {
+    .btn {
+      margin-right: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 // achievements
 
+// Important facts
+
+.fac-img {
+  width: 100%;
+}
 // skills
 
 // gallery
@@ -170,5 +224,77 @@ h5 {
 // testimonials
 
 // contact me
+.contact-title {
+  max-width: 500px;
+}
 
+.contact-img {
+  width: 100%;
+}
+
+.form-input {
+  font-size: 13px;
+  line-height: 36px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  border: none;
+  border: 1px solid #ced4da;
+  outline: none;
+}
+
+form > textarea {
+  resize: none;
+  width: 100%;
+}
+
+.form-input:focus {
+  border: 1px solid var(--secondary-text-color);
+  transition: border-color 0.2s ease-in-out;
+}
 // footer
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  > a {
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+    width: 50px;
+    margin-left: 4px;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-text-color);
+    border: solid 2px var(--primary-text-color);
+    border-radius: 50px;
+  }
+  > a:hover {
+    color: var(--primary-text-color);
+    background-color: white;
+    border: solid 2px var(--primary-text-color);
+    transition: 0.4s;
+  }
+}
+
+.socials > .fa {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.container.bg-primary {
+  padding: 6px 0;
+  font-size: 40px;
+}
+.container.bg-primary p {
+  line-height: 30px;
+  font-size: 18px;
+  color: black;
+}
+.wt {
+  color: white;
+  text-decoration: none;
+}
