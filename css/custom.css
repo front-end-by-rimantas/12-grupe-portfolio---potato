@@ -195,6 +195,80 @@ h5.no-decoration::before, h5.no-decoration::after {
   color: var(--primary-color-anti);
 }
 
+#blog .blogpost {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  background-size: 100% 2px;
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+}
+
+#blog .blogpost img {
+  width: 100%;
+}
+
+#blog .blogpost .content {
+  padding: 30px;
+}
+
+#blog .blogpost .content a {
+  text-decoration: none;
+}
+
+#blog .blogpost .content .tag {
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
+#blog .blogpost .content .tag a {
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content .tag a:hover {
+  color: var(--primary-color-anti);
+}
+
+#blog .blogpost .content h5 {
+  color: var(--primary-color-anti);
+  margin-bottom: 15px;
+}
+
+#blog .blogpost .content h5:hover {
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#blog .blogpost .content .date-coment {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#blog .blogpost .content .date-coment span {
+  color: var(--primary-text-color);
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
 .contact-title {
   max-width: 500px;
 }

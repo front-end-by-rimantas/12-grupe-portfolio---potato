@@ -45,3 +45,33 @@ const services = [
 //Testimonials
 
 //Blog
+
+const blog = [
+  {
+    img: "1",
+    tags: ["Design", "Development"],
+    title: "Urna pretium sociis susc sodal leo a viverra eleifend.",
+    description:
+      "Cursus scelerisque pede class eleifend varius. Ultricies sem. Diam Natoq cura amet interdum lorem nostra.",
+    date: "12 August 19",
+    comments: "12"
+  },
+  {
+    img: "2",
+    tags: ["Development", "Seo"],
+    title: "Etiam vivamus hac nostra pe",
+    description:
+      "Cursus scelerisque pede class eleifend varius. Ultricies sem. Diam Natoq cura amet interdum lorem nostra.",
+    date: "16 August 19",
+    comments: "10"
+  },
+  {
+    img: "3",
+    tags: ["Design", "Seo"],
+    title: "Dapibus conubia lacin. Tempu ligula sed quis venenat.",
+    description:
+      "Cursus scelerisque pede class eleifend varius. Ultricies sem. Diam Natoq cura amet interdum lorem nostra.",
+    date: "20 August 19",
+    comments: "07"
+  }
+];
