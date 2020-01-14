@@ -1,3 +1,4 @@
 "use strict";
 
-renderServices("#services_blocks", services);
+renderServices(services);
+renderBlogpost(blog);
