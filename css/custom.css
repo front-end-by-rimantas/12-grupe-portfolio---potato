@@ -233,6 +233,8 @@ h5.no-decoration::before, h5.no-decoration::after {
 }
 
 #blog .blogpost .content .tag a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   color: var(--primary-color-anti);
 }
 
@@ -242,6 +244,8 @@ h5.no-decoration::before, h5.no-decoration::after {
 }
 
 #blog .blogpost .content h5:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   color: var(--primary-text-color);
 }
 
@@ -258,6 +262,9 @@ h5.no-decoration::before, h5.no-decoration::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #blog .blogpost .content .date-coment span {

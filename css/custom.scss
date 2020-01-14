@@ -229,6 +229,7 @@ h5 {
         }
 
         a:hover {
+          transition: 0.5s;
           color: var(--primary-color-anti);
         }
       }
@@ -239,6 +240,7 @@ h5 {
       }
 
       h5:hover {
+        transition: 0.5s;
         color: var(--primary-text-color);
       }
 
@@ -251,6 +253,7 @@ h5 {
         padding-top: 15px;
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         span {
           color: var(--primary-text-color);
           font-style: italic;
