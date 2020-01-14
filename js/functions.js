@@ -62,7 +62,7 @@ function renderBrogressBar( data ) {
     }
     const block = data[i];
 
-    HTML += `<div class="col-4 ">
+    HTML += `<div class="col-4 col-md-12">
               <div class="bg-primary progr-bar">
                 <div class="progres-numbr">${block.number}</div>
                 <h5 class="no-decoration">${block.title}</h5>
