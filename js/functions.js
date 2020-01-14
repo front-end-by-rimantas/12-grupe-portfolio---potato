@@ -48,3 +48,34 @@ function renderServices(target, data) {
   return;
 }
 //Services end
+
+// progress-barr
+
+function renderBrogressBar( data ) {
+  const maxBarStuff = 3;
+  let createdBars = 0; 
+  let HTML = '';
+
+  for ( let i=0; i<data.length; i++ ) {
+    if (createdBars === maxBarStuff ){
+      break;
+    }
+    const block = data[i];
+
+    HTML += `<div class="col-4 ">
+              <div class="bg-primary progr-bar">
+                <div class="progres-numbr">${block.number}</div>
+                <h5 class="no-decoration">${block.title}</h5>
+              </div>
+            </div>`;
+
+    createdBars++;
+
+  }
+
+
+
+  document.querySelector('#progress-bar > .row').innerHTML = HTML;
+  return;
+}
+// progress-bar end
