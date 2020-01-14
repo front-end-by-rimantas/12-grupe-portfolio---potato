@@ -5,7 +5,7 @@
 
   > .icon-container {
     position: relative;
-    height: 102px;
+    height: 100px;
 
     > .circle {
       position: absolute;
@@ -13,8 +13,8 @@
       margin-right: auto;
       left: 0;
       right: 0;
-      height: 102px;
-      width: 102px;
+      height: 100px;
+      width: 100px;
       border: 1px solid var(--primary-text-color);
       border-radius: 50%;
       animation: rotate 2s infinite linear;
@@ -51,6 +51,6 @@
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
