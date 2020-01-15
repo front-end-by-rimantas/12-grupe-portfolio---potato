@@ -35,6 +35,11 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
 h4 {
   font-size: 21px;
   line-height: 32px;
@@ -173,9 +178,39 @@ h5 {
 // achievements
 
 // Important facts
-
-.fac-img {
+.facts-img {
   width: 100%;
+}
+// preogresss bariukas
+.progres-br {
+  background-image: url(/img/dot.png);
+  background-repeat: repeat;
+
+  .progr-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 500;
+    line-height: 60px;
+    height: 80px;
+    border-radius: 50px;
+  }
+  .progres-numbr {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  .no-decoration {
+    color: var(--primary-color-anti);
+  }
 }
 // skills
 
@@ -186,6 +221,79 @@ h5 {
 // services
 
 // testimonials
+
+// blog
+#blog {
+  .blogpost {
+    background-color: white;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--primary-color);
+    background-size: 100% 2px;
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+    img {
+      width: 100%;
+    }
+
+    .content {
+      padding: 30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .tag {
+        margin-bottom: 15px;
+        color: var(--primary-text-color);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+
+        a {
+          font-style: italic;
+          letter-spacing: 1px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 800;
+          color: var(--primary-text-color);
+        }
+
+        a:hover {
+          transition: 0.5s;
+          color: var(--primary-color-anti);
+        }
+      }
+
+      h5 {
+        color: var(--primary-color-anti);
+        margin-bottom: 15px;
+      }
+
+      h5:hover {
+        transition: 0.5s;
+        color: var(--primary-text-color);
+      }
+
+      p {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .date-coment {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        span {
+          color: var(--primary-text-color);
+          font-style: italic;
+          letter-spacing: 1px;
+          line-height: 16px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
 
 // contact me
 .contact-title {
@@ -217,48 +325,63 @@ form > textarea {
   border: 1px solid var(--secondary-text-color);
   transition: border-color 0.2s ease-in-out;
 }
+
 // footer
 .socials {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .socials-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 75px;
 
-  > a {
+    > a {
+      display: inline-block;
+      font-size: 16px;
+      height: 50px;
+      width: 50px;
+      margin-right: 4px;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      background-color: var(--primary-text-color);
+      border: solid 2px var(--primary-text-color);
+      border-radius: 50px;
+    }
+    > a:hover {
+      color: var(--primary-text-color);
+      background-color: white;
+      border: solid 2px var(--primary-text-color);
+      transition: 0.4s;
+    }
+  }
+  .fa {
     display: inline-block;
-    font-size: 16px;
-    height: 50px;
-    width: 50px;
-    margin-left: 4px;
+  }
+
+  @media (max-width: 1100px) {
+    .col-md-6 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .container.bg-primary {
+    padding: 6px 0;
+    font-size: 40px;
+  }
+  .container.bg-primary p {
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+  }
+  .wt {
     color: white;
-    text-align: center;
-    padding: 15px;
-    background-color: var(--primary-text-color);
-    border: solid 2px var(--primary-text-color);
-    border-radius: 50px;
+    text-decoration: none;
   }
-  > a:hover {
-    color: var(--primary-text-color);
-    background-color: white;
-    border: solid 2px var(--primary-text-color);
-    transition: 0.4s;
-  }
-}
-
-.socials > .fa {
-  display: inline-block;
-  font-size: 20px;
-}
-
-.container.bg-primary {
-  padding: 6px 0;
-  font-size: 40px;
-}
-.container.bg-primary p {
-  line-height: 30px;
-  font-size: 18px;
-  color: black;
-}
-.wt {
-  color: white;
-  text-decoration: none;
 }

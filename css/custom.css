@@ -36,6 +36,12 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
+
 h4 {
   font-size: 21px;
   line-height: 32px;
@@ -169,8 +175,134 @@ h5.no-decoration::before, h5.no-decoration::after {
   }
 }
 
-.fac-img {
+.facts-img {
   width: 100%;
+}
+
+.progres-br {
+  background-image: url(/img/dot.png);
+  background-repeat: repeat;
+}
+
+.progres-br .progr-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  line-height: 60px;
+  height: 80px;
+  border-radius: 50px;
+}
+
+.progres-br .progres-numbr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+.progres-br .no-decoration {
+  color: var(--primary-color-anti);
+}
+
+#blog .blogpost {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  background-size: 100% 2px;
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+}
+
+#blog .blogpost img {
+  width: 100%;
+}
+
+#blog .blogpost .content {
+  padding: 30px;
+}
+
+#blog .blogpost .content a {
+  text-decoration: none;
+}
+
+#blog .blogpost .content .tag {
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
+#blog .blogpost .content .tag a {
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content .tag a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: var(--primary-color-anti);
+}
+
+#blog .blogpost .content h5 {
+  color: var(--primary-color-anti);
+  margin-bottom: 15px;
+}
+
+#blog .blogpost .content h5:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#blog .blogpost .content .date-coment {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#blog .blogpost .content .date-coment span {
+  color: var(--primary-text-color);
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
 }
 
 .contact-title {
@@ -205,6 +337,11 @@ form > textarea {
 }
 
 .socials {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.socials .socials-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,14 +350,15 @@ form > textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 75px;
 }
 
-.socials > a {
+.socials .socials-icons > a {
   display: inline-block;
   font-size: 16px;
   height: 50px;
   width: 50px;
-  margin-left: 4px;
+  margin-right: 4px;
   color: white;
   text-align: center;
   padding: 15px;
@@ -229,7 +367,7 @@ form > textarea {
   border-radius: 50px;
 }
 
-.socials > a:hover {
+.socials .socials-icons > a:hover {
   color: var(--primary-text-color);
   background-color: white;
   border: solid 2px var(--primary-text-color);
@@ -237,23 +375,33 @@ form > textarea {
   transition: 0.4s;
 }
 
-.socials > .fa {
+.socials .fa {
   display: inline-block;
-  font-size: 20px;
 }
 
-.container.bg-primary {
+@media (max-width: 1100px) {
+  .socials .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.footer .container.bg-primary {
   padding: 6px 0;
   font-size: 40px;
 }
 
-.container.bg-primary p {
+.footer .container.bg-primary p {
   line-height: 30px;
   font-size: 18px;
   color: black;
 }
 
-.wt {
+.footer .wt {
   color: white;
   text-decoration: none;
 }
