@@ -63,8 +63,8 @@ function renderBrogressBar( data ) {
       break;
     }
     const block = data[i];
-
-    HTML += `<div class="col-4 col-md-12">
+                   //  ar galiu data-animation deti cia? ar i HTML reikiia?
+    HTML += `<div class=" pbcontent col-4 col-md-12"> 
               <div class="bg-primary progr-bar">
                 <div class="progres-numbr">${block.number}</div>
                 <h5 class="no-decoration">${block.title}</h5>
@@ -75,11 +75,57 @@ function renderBrogressBar( data ) {
 
   }
 
-
-
   document.querySelector('#progress-bar > .row').innerHTML = HTML;
   return;
 }
+
+    // sekcija kur prasideda galima animacija
+function sectioNumberCounter( target ) {
+    const targetSection = document.querySelector(target);
+    const sectionAnimStatus = targetSection.dataset.animated_counter;
+    let status = false;
+    console.log('yess'); 
+    if ( sectionAnimStatus && sectionAnimStatus === 'true' ) {
+      status = true;
+    }
+    const pathToNumbr = targetSection.dataset.animated_element;
+    if ( !pathToNumbr || 
+          pathToNumbr ==='' ) {
+      return targetSection.dataset.animated_counter = 'true';
+    }
+            // animavimo elementai
+    const animation = targetSection.querySelectorAll(pathToNumbr);
+    
+    const nuo = 0;
+    const iki = 750;
+    const time = 3;
+
+}
+
+{/* <section id ="progress-bar"
+      data-animated_counter="false">  
+      data-animated_element=".progres-numbr">
+
+      <div class="progress-numbr"
+           data-numberFrom="0"
+           data-numberTo="750"
+           data-time="3s"
+           data-timeUnit="s">750</div>
+      <div class="progress-numbr"
+           data-numberFrom="0"
+           data-numberTo="750"
+           data-time="3s"
+           data-timeUnit="s">750</div>
+      <div class="progress-numbr"
+           data-numberFrom="0"
+           data-numberTo="750"
+           data-time="3s"
+           data-timeUnit="s">750</div>
+
+</section> */}
+
+
+
 //Progress end
 
 //Portfolio
