@@ -241,6 +241,7 @@ h5.no-decoration::before, h5.no-decoration::after {
 #blog .blogpost .content h5 {
   color: var(--primary-color-anti);
   margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
 }
 
 #blog .blogpost .content h5:hover {

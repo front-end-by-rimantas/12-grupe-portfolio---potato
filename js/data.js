@@ -1,4 +1,37 @@
 "use strict";
+
+//Navigation
+const navigation = [
+  {
+    title: "Home",
+    to: "#home"
+  },
+  {
+    title: "About",
+    to: "#about"
+  },
+  {
+    title: "Services",
+    to: "#Services"
+  },
+  {
+    title: "Portfolio",
+    to: "#portfolio"
+  },
+  {
+    title: "Testimonial",
+    to: "#testimonial"
+  },
+  {
+    title: "Blog",
+    to: "#blog"
+  },
+  {
+    title: "Contact",
+    to: "#contact"
+  }
+];
+
 // Services
 const services = [
   {
