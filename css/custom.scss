@@ -105,12 +105,12 @@ h5 {
 // header
 #main_header {
   padding: 0;
+  height: 60px;
 
   .row {
     margin: 0;
 
     .col-12 {
-      height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -124,7 +124,7 @@ h5 {
           font-size: 16px;
           font-weight: 500;
           letter-spacing: 1px;
-          text-shadow: 0.5px 0 0 var(--primary-color-anti);
+          text-shadow: 0.6px 0 0 var(--primary-color-anti);
 
           &.active::before {
             width: 8px;
@@ -150,6 +150,33 @@ h5 {
               var(--primary-color-anti) transparent;
           }
         }
+      }
+    }
+  }
+}
+
+#main_header.header-fixed {
+  position: fixed;
+  top: -70px;
+  background: var(--primary-color);
+  z-index: 99;
+  transform: translateY(70px);
+  transition: transform 0.7s;
+
+  .row > .col-12 > nav {
+    a:hover {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      transition: 0.5s;
+    }
+    a.active {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      &::before {
+        border-color: #fff transparent transparent #fff;
+      }
+      &::after {
+        border-color: transparent #fff #fff transparent;
       }
     }
   }
@@ -320,34 +347,38 @@ h5 {
 }
 
 // contact me
-.contact-title {
-  max-width: 500px;
-}
+#contact {
+  img {
+    width: 100%;
+  }
 
-.contact-img {
-  width: 100%;
-}
+  .contact-title {
+    max-width: 500px;
+  }
 
-.form-input {
-  font-size: 13px;
-  line-height: 36px;
-  border-radius: 5px;
-  width: 100%;
-  padding: 0 15px;
-  margin-bottom: 15px;
-  border: none;
-  border: 1px solid #ced4da;
-  outline: none;
-}
+  form {
+    > .form-input {
+      font-size: 13px;
+      line-height: 36px;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      border: none;
+      border: 1px solid #ced4da;
+      outline: none;
 
-form > textarea {
-  resize: none;
-  width: 100%;
-}
+      &:focus {
+        border: 1px solid var(--secondary-text-color);
+        transition: border-color 0.2s ease-in-out;
+      }
+    }
+  }
 
-.form-input:focus {
-  border: 1px solid var(--secondary-text-color);
-  transition: border-color 0.2s ease-in-out;
+  form > textarea {
+    resize: none;
+    width: 100%;
+  }
 }
 
 // footer

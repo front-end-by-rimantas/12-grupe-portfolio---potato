@@ -9,7 +9,7 @@ function renderNav(data) {
     return console.error("ERROR: Navigation data array is empty");
   }
 
-  let HTML = `<a class="active" href="#home">Home<span></span></a>`;
+  let HTML = "";
   const targetDOM = document.querySelector("#main_header > .row nav");
 
   for (let i = 0; i < data.length; i++) {
@@ -37,10 +37,14 @@ function removeActive() {
   activeLink.forEach(i => i.classList.remove("active"));
 }
 
-function headerScroll() {
-  const headerHeight = document.querySelector("#main_header").offsetHeight;
+function headerPosition() {
+  if (window.scrollY > 180) {
+    document.querySelector("#main_header").classList.add("header-fixed");
+  } else {
+    document.querySelector("#main_header").classList.remove("header-fixed");
+  }
 
-  console.log(headerHeight);
+  return;
 }
 //Nav end
 

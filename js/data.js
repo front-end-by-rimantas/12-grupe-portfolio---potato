@@ -3,12 +3,16 @@
 //Navigation
 const navigation = [
   {
+    title: "Home",
+    to: "#hero"
+  },
+  {
     title: "About",
     to: "#about_me"
   },
   {
     title: "Services",
-    to: "#Services"
+    to: "#services"
   },
   {
     title: "Portfolio",

@@ -108,6 +108,7 @@ h5.no-decoration::before, h5.no-decoration::after {
 
 #main_header {
   padding: 0;
+  height: 60px;
 }
 
 #main_header .row {
@@ -115,7 +116,6 @@ h5.no-decoration::before, h5.no-decoration::after {
 }
 
 #main_header .row .col-12 {
-  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +135,7 @@ h5.no-decoration::before, h5.no-decoration::after {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 1px;
-  text-shadow: 0.5px 0 0 var(--primary-color-anti);
+  text-shadow: 0.6px 0 0 var(--primary-color-anti);
 }
 
 #main_header .row .col-12 nav a.active::before {
@@ -158,6 +158,39 @@ h5.no-decoration::before, h5.no-decoration::after {
   bottom: 0;
   border: 2px solid;
   border-color: transparent var(--primary-color-anti) var(--primary-color-anti) transparent;
+}
+
+#main_header.header-fixed {
+  position: fixed;
+  top: -70px;
+  background: var(--primary-color);
+  z-index: 99;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a:hover {
+  color: #fff;
+  text-shadow: 0.5px 0 0 #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active {
+  color: #fff;
+  text-shadow: 0.5px 0 0 #fff;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active::before {
+  border-color: #fff transparent transparent #fff;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active::after {
+  border-color: transparent #fff #fff transparent;
 }
 
 #about_me img {
@@ -331,15 +364,15 @@ h5.no-decoration::before, h5.no-decoration::after {
   font-weight: 800;
 }
 
-.contact-title {
-  max-width: 500px;
-}
-
-.contact-img {
+#contact img {
   width: 100%;
 }
 
-.form-input {
+#contact .contact-title {
+  max-width: 500px;
+}
+
+#contact form > .form-input {
   font-size: 13px;
   line-height: 36px;
   border-radius: 5px;
@@ -351,15 +384,15 @@ h5.no-decoration::before, h5.no-decoration::after {
   outline: none;
 }
 
-form > textarea {
-  resize: none;
-  width: 100%;
-}
-
-.form-input:focus {
+#contact form > .form-input:focus {
   border: 1px solid var(--secondary-text-color);
   -webkit-transition: border-color 0.2s ease-in-out;
   transition: border-color 0.2s ease-in-out;
+}
+
+#contact form > textarea {
+  resize: none;
+  width: 100%;
 }
 
 .socials {
