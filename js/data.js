@@ -3,12 +3,8 @@
 //Navigation
 const navigation = [
   {
-    title: "Home",
-    to: "#home"
-  },
-  {
     title: "About",
-    to: "#about"
+    to: "#about_me"
   },
   {
     title: "Services",

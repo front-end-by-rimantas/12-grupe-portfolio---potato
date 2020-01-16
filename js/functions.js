@@ -1,6 +1,47 @@
 "use strict";
 
 //Nav
+function renderNav(data) {
+  if (!Array.isArray(data)) {
+    return console.error("ERROR: Incorrect navigation data format.");
+  }
+  if (data.length === 0) {
+    return console.error("ERROR: Navigation data array is empty");
+  }
+
+  let HTML = `<a class="active" href="#home">Home<span></span></a>`;
+  const targetDOM = document.querySelector("#main_header > .row nav");
+
+  for (let i = 0; i < data.length; i++) {
+    const navItem = data[i];
+    HTML += `<a href="${navItem.to}">${navItem.title}<span></span></a>`;
+  }
+
+  targetDOM.innerHTML = HTML;
+
+  const navItems = targetDOM.querySelectorAll("a");
+
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener("click", e => {
+      removeActive();
+      navItems[i].classList.add("active");
+    });
+  }
+}
+
+function removeActive() {
+  const activeLink = document.querySelectorAll(
+    "#main_header > .row nav > a.active"
+  );
+
+  activeLink.forEach(i => i.classList.remove("active"));
+}
+
+function headerScroll() {
+  const headerHeight = document.querySelector("#main_header").offsetHeight;
+
+  console.log(headerHeight);
+}
 //Nav end
 
 // Services

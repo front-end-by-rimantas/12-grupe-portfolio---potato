@@ -103,6 +103,57 @@ h5 {
   padding-bottom: 50px;
 }
 // header
+#main_header {
+  padding: 0;
+
+  .row {
+    margin: 0;
+
+    .col-12 {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      nav {
+        a {
+          position: relative;
+          text-decoration: none;
+          color: var(--primary-color-anti);
+          padding: 8px 14px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-shadow: 0.5px 0 0 var(--primary-color-anti);
+
+          &.active::before {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 2px solid;
+            border-color: var(--primary-color-anti) transparent transparent
+              var(--primary-color-anti);
+          }
+
+          &.active::after {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 2px solid;
+            border-color: transparent var(--primary-color-anti)
+              var(--primary-color-anti) transparent;
+          }
+        }
+      }
+    }
+  }
+}
 
 // hero
 
