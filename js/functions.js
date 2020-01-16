@@ -66,7 +66,10 @@ function renderBrogressBar( data ) {
                    //  ar galiu data-animation deti cia? ar i HTML reikiia?
     HTML += `<div class=" pbcontent col-4 col-md-12"> 
               <div class="bg-primary progr-bar">
-                <div class="progres-numbr">${block.number}</div>
+                <div class="progres-numbr"
+                data-counter-from="0"
+                data-counter-to="${block.number}"
+                data-counter-time="2000">${block.number}</div>
                 <h5 class="no-decoration">${block.title}</h5>
               </div>
             </div>`;
@@ -79,50 +82,30 @@ function renderBrogressBar( data ) {
   return;
 }
 
-    // sekcija kur prasideda galima animacija
-function sectioNumberCounter( target ) {
-    const targetSection = document.querySelector(target);
-    const sectionAnimStatus = targetSection.dataset.animated_counter;
-    let status = false;
-    console.log('yess'); 
-    if ( sectionAnimStatus && sectionAnimStatus === 'true' ) {
-      status = true;
-    }
-    const pathToNumbr = targetSection.dataset.animated_element;
-    if ( !pathToNumbr || 
-          pathToNumbr ==='' ) {
-      return targetSection.dataset.animated_counter = 'true';
-    }
-            // animavimo elementai
-    const animation = targetSection.querySelectorAll(pathToNumbr);
+function autoPrCounter(){
+    const numbrElement = document.querySelectorAll('[data-counter-from]');
+    const speed = 1000 / 24;
     
-    const nuo = 0;
-    const iki = 750;
-    const time = 3;
+    for ( let i=0; i<numbrElement.length; i++) {
+      let step = 0;
+      const elem = numbrElement[i];
+      const from = parseFloat(elem.dataset.counterFrom);
+      const to = parseFloat(elem.dataset.counterTo);
+      const time = parseFloat(elem.dataset.counterTime);
+      const totalSteps = Math.ceil(time / speed);
 
+     const timer = setInterval(() => {
+        elem.textContent = Math.round((to - from) / totalSteps * step);
+        step++; 
+          if ( step === totalSteps ){
+            clearInterval( timer )
+          }
+     }, speed ); 
+
+    }
+    
 }
 
-{/* <section id ="progress-bar"
-      data-animated_counter="false">  
-      data-animated_element=".progres-numbr">
-
-      <div class="progress-numbr"
-           data-numberFrom="0"
-           data-numberTo="750"
-           data-time="3s"
-           data-timeUnit="s">750</div>
-      <div class="progress-numbr"
-           data-numberFrom="0"
-           data-numberTo="750"
-           data-time="3s"
-           data-timeUnit="s">750</div>
-      <div class="progress-numbr"
-           data-numberFrom="0"
-           data-numberTo="750"
-           data-time="3s"
-           data-timeUnit="s">750</div>
-
-</section> */}
 
 
 
