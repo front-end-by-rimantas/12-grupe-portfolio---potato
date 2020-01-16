@@ -4,7 +4,7 @@
 const navigation = [
   {
     title: "Home",
-    to: "#hero"
+    to: "#"
   },
   {
     title: "About",

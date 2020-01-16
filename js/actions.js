@@ -1,12 +1,11 @@
 "use strict";
 
 renderNav(navigation);
-
+headerPosition();
 // scroll listener
 window.addEventListener("scroll", () => {
   headerPosition();
 });
-headerPosition();
 
 renderServices(services);
 renderBlogpost(blog);

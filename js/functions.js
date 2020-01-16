@@ -20,21 +20,12 @@ function renderNav(data) {
   targetDOM.innerHTML = HTML;
 
   const navItems = targetDOM.querySelectorAll("a");
-
-  for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener("click", e => {
-      removeActive();
-      navItems[i].classList.add("active");
-    });
-  }
 }
 
 function removeActive() {
-  const activeLink = document.querySelectorAll(
-    "#main_header > .row nav > a.active"
-  );
-
-  activeLink.forEach(i => i.classList.remove("active"));
+  document
+    .querySelector(`#main_header > .row nav > a.active`)
+    .classList.remove("active");
 }
 
 function headerPosition() {
@@ -44,7 +35,44 @@ function headerPosition() {
     document.querySelector("#main_header").classList.remove("header-fixed");
   }
 
-  return;
+  let sectionsHeights = [];
+  for (let i = 0; i < navigation.length; i++) {
+    const link = navigation[i].to;
+    if (link === "#") {
+      sectionsHeights.push(0);
+    } else {
+      const section = document.querySelector(link);
+      sectionsHeights.push(section.offsetTop);
+    }
+  }
+
+  const headerHeight = document.querySelector("#main_header").offsetHeight;
+  const height = window.scrollY + headerHeight;
+  let activeSection = 0;
+  for (let i = 0; i < sectionsHeights.length; i++) {
+    const currentHeight = sectionsHeights[i];
+    if (currentHeight <= height) {
+      activeSection = i;
+    } else {
+      break;
+    }
+  }
+
+  if (document.querySelector(`#main_header > .row nav > a.active`) === null) {
+    document
+      .querySelector(
+        `#main_header > .row nav > a[href="${navigation[activeSection].to}"]`
+      )
+      .classList.add("active");
+  } else {
+    removeActive();
+
+    document
+      .querySelector(
+        `#main_header > .row nav > a[href="${navigation[activeSection].to}"]`
+      )
+      .classList.add("active");
+  }
 }
 //Nav end
 
