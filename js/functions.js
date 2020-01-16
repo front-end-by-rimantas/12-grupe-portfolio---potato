@@ -1,4 +1,8 @@
 "use strict";
+//Update on scroll
+function updateOnScroll() {
+  headerPosition();
+}
 
 //Nav
 function renderNav(data) {
@@ -18,8 +22,6 @@ function renderNav(data) {
   }
 
   targetDOM.innerHTML = HTML;
-
-  const navItems = targetDOM.querySelectorAll("a");
 }
 
 function removeActive() {

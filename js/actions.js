@@ -3,9 +3,7 @@
 renderNav(navigation);
 headerPosition();
 // scroll listener
-window.addEventListener("scroll", () => {
-  headerPosition();
-});
+window.addEventListener("scroll", updateOnScroll);
 
 renderServices(services);
 renderBlogpost(blog);
