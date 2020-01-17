@@ -1,5 +1,10 @@
 "use strict";
 
+function updateOnScroll() {
+  autoCounter();
+}
+
+
 //Nav
 //Nav end
 
@@ -82,27 +87,54 @@ function renderBrogressBar( data ) {
   return;
 }
 
-function autoPrCounter(){
-    const numbrElement = document.querySelectorAll('[data-counter-from]');
-    const speed = 1000 / 24;
-    
-    for ( let i=0; i<numbrElement.length; i++) {
-      let step = 0;
-      const elem = numbrElement[i];
-      const from = parseFloat(elem.dataset.counterFrom);
-      const to = parseFloat(elem.dataset.counterTo);
-      const time = parseFloat(elem.dataset.counterTime);
-      const totalSteps = Math.ceil(time / speed);
+function autoCounter(){
+  const height = window.scrollY;  
+  const screenHeight = window.innerHeight;
+  const progresBarCounter = document.querySelector('#progress-bar').offsetTop;
+  const scroller = height + screenHeight;  
 
-     const timer = setInterval(() => {
-        elem.textContent = Math.round((to - from) / totalSteps * step);
-        step++; 
-          if ( step === totalSteps ){
-            clearInterval( timer )
-          }
-     }, speed ); 
+  console.log( scroller);
+  
+  if ( scroller > progresBarCounter ) {
+    
+    if ( document.querySelector('#progress-bar.activated') ) {
+      return;
+    } else {
+
+          document.querySelector('#progress-bar').classList.add("activated");
+          
+        const numbrElement = document.querySelectorAll('[data-counter-from]');
+        const speed = 1000 / 25;
+        
+          
+          for ( let i=0; i<numbrElement.length; i++) {
+            let step = 0;
+            const elem = numbrElement[i];
+            const from = parseFloat(elem.dataset.counterFrom);
+            const to = parseFloat(elem.dataset.counterTo);
+            const time = parseFloat(elem.dataset.counterTime);
+            const totalSteps = Math.ceil(time / speed) + 1;
+            
+            elem.textContent = from;
+            console.log();
+            
+            const timer = setInterval(() => {
+              step++; 
+              elem.textContent = Math.round((to - from) / totalSteps * step);
+              if ( step === totalSteps ){
+                clearInterval( timer )
+              }
+            }, speed ); 
+            
+
 
     }
+    }
+    
+    }
+
+    
+  
     
 }
 
