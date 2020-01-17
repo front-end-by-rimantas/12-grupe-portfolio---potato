@@ -129,17 +129,17 @@ function renderServices(data) {
 //Services end
 
 //Progress
-function renderBrogressBar( data ) {
+function renderBrogressBar(data) {
   const maxBarStuff = 3;
-  let createdBars = 0; 
-  let HTML = '';
+  let createdBars = 0;
+  let HTML = "";
 
-  for ( let i=0; i<data.length; i++ ) {
-    if (createdBars === maxBarStuff ){
+  for (let i = 0; i < data.length; i++) {
+    if (createdBars === maxBarStuff) {
       break;
     }
     const block = data[i];
-                   //  ar galiu data-animation deti cia? ar i HTML reikiia?
+    //  ar galiu data-animation deti cia? ar i HTML reikiia?
     HTML += `<div class=" pbcontent col-4 col-md-12"> 
               <div class="bg-primary progr-bar">
                 <div class="progres-numbr"
@@ -151,66 +151,48 @@ function renderBrogressBar( data ) {
             </div>`;
 
     createdBars++;
-
   }
 
-  document.querySelector('#progress-bar > .row').innerHTML = HTML;
+  document.querySelector("#progress-bar > .row").innerHTML = HTML;
   return;
 }
 
-function autoCounter(){
-  const height = window.scrollY;  
+function autoCounter() {
+  const height = window.scrollY;
   const screenHeight = window.innerHeight;
-  const progresBarCounter = document.querySelector('#progress-bar').offsetTop;
-  const scroller = height + screenHeight;  
+  const progresBarCounter = document.querySelector("#progress-bar").offsetTop;
+  const scroller = height + screenHeight;
 
-  console.log( scroller);
-  
-  if ( scroller > progresBarCounter ) {
-    
-    if ( document.querySelector('#progress-bar.activated') ) {
+  if (scroller > progresBarCounter) {
+    if (document.querySelector("#progress-bar.activated")) {
       return;
     } else {
+      document.querySelector("#progress-bar").classList.add("activated");
 
-          document.querySelector('#progress-bar').classList.add("activated");
-          
-        const numbrElement = document.querySelectorAll('[data-counter-from]');
-        const speed = 1000 / 25;
-        
-          
-          for ( let i=0; i<numbrElement.length; i++) {
-            let step = 0;
-            const elem = numbrElement[i];
-            const from = parseFloat(elem.dataset.counterFrom);
-            const to = parseFloat(elem.dataset.counterTo);
-            const time = parseFloat(elem.dataset.counterTime);
-            const totalSteps = Math.ceil(time / speed) + 1;
-            
-            elem.textContent = from;
-            console.log();
-            
-            const timer = setInterval(() => {
-              step++; 
-              elem.textContent = Math.round((to - from) / totalSteps * step);
-              if ( step === totalSteps ){
-                clearInterval( timer )
-              }
-            }, speed ); 
-            
+      const numbrElement = document.querySelectorAll("[data-counter-from]");
+      const speed = 1000 / 25;
 
+      for (let i = 0; i < numbrElement.length; i++) {
+        let step = 0;
+        const elem = numbrElement[i];
+        const from = parseFloat(elem.dataset.counterFrom);
+        const to = parseFloat(elem.dataset.counterTo);
+        const time = parseFloat(elem.dataset.counterTime);
+        const totalSteps = Math.ceil(time / speed) + 1;
 
+        elem.textContent = from;
+
+        const timer = setInterval(() => {
+          step++;
+          elem.textContent = Math.round(((to - from) / totalSteps) * step);
+          if (step === totalSteps) {
+            clearInterval(timer);
+          }
+        }, speed);
+      }
     }
-    }
-    
-    }
-
-    
-  
-    
+  }
 }
-
-
-
 
 //Progress end
 
@@ -277,4 +259,3 @@ function renderBlogpost(data) {
   targetDOM.innerHTML = HTML;
 }
 //Blog end
-
