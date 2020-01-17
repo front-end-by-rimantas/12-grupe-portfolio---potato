@@ -24,6 +24,15 @@ function renderNav(data) {
   targetDOM.innerHTML = HTML;
 }
 
+function mobileActions() {
+  const mobileMenu = document.querySelector(`#main_header > .row .mobile-menu`);
+  const headerNav = document.querySelector("#main_header > .row .col-12");
+
+  mobileMenu.addEventListener("click", () =>
+    headerNav.classList.toggle("on-mobile")
+  );
+}
+
 function removeActive() {
   document
     .querySelector(`#main_header > .row nav > a.active`)
