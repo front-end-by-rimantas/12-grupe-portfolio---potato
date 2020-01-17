@@ -103,6 +103,84 @@ h5 {
   padding-bottom: 50px;
 }
 // header
+#main_header {
+  padding: 0;
+  height: 60px;
+
+  .row {
+    margin: 0;
+
+    .col-12 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      nav {
+        a {
+          position: relative;
+          text-decoration: none;
+          color: var(--primary-color-anti);
+          padding: 8px 14px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-shadow: 0.6px 0 0 var(--primary-color-anti);
+
+          &.active::before {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 2px solid;
+            border-color: var(--primary-color-anti) transparent transparent
+              var(--primary-color-anti);
+          }
+
+          &.active::after {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 2px solid;
+            border-color: transparent var(--primary-color-anti)
+              var(--primary-color-anti) transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main_header.header-fixed {
+  position: fixed;
+  top: -70px;
+  background: var(--primary-color);
+  z-index: 99;
+  transform: translateY(70px);
+  transition: transform 0.7s;
+
+  .row > .col-12 > nav {
+    a:hover {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      transition: 0.5s;
+    }
+    a.active {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      &::before {
+        border-color: #fff transparent transparent #fff;
+      }
+      &::after {
+        border-color: transparent #fff #fff transparent;
+      }
+    }
+  }
+}
 
 // hero
 #hero {
@@ -181,37 +259,6 @@ h5 {
 .facts-img {
   width: 100%;
 }
-// preogresss bariukas
-.progres-br {
-  background-image: url(/img/dot.png);
-  background-repeat: repeat;
-
-  .progr-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-weight: 500;
-    line-height: 60px;
-    height: 80px;
-    border-radius: 50px;
-  }
-  .progres-numbr {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    margin-left: 10px;
-    margin-right: 20px;
-    font-weight: 600;
-  }
-  .no-decoration {
-    color: var(--primary-color-anti);
-  }
-}
 // skills
 
 // gallery
@@ -265,6 +312,7 @@ h5 {
       h5 {
         color: var(--primary-color-anti);
         margin-bottom: 15px;
+        font-family: "Open Sans", sans-serif;
       }
 
       h5:hover {
@@ -296,34 +344,38 @@ h5 {
 }
 
 // contact me
-.contact-title {
-  max-width: 500px;
-}
+#contact {
+  img {
+    width: 100%;
+  }
 
-.contact-img {
-  width: 100%;
-}
+  .contact-title {
+    max-width: 500px;
+  }
 
-.form-input {
-  font-size: 13px;
-  line-height: 36px;
-  border-radius: 5px;
-  width: 100%;
-  padding: 0 15px;
-  margin-bottom: 15px;
-  border: none;
-  border: 1px solid #ced4da;
-  outline: none;
-}
+  form {
+    > .form-input {
+      font-size: 13px;
+      line-height: 36px;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      border: none;
+      border: 1px solid #ced4da;
+      outline: none;
 
-form > textarea {
-  resize: none;
-  width: 100%;
-}
+      &:focus {
+        border: 1px solid var(--secondary-text-color);
+        transition: border-color 0.2s ease-in-out;
+      }
+    }
+  }
 
-.form-input:focus {
-  border: 1px solid var(--secondary-text-color);
-  transition: border-color 0.2s ease-in-out;
+  form > textarea {
+    resize: none;
+    width: 100%;
+  }
 }
 
 // footer

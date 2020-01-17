@@ -1,4 +1,37 @@
 "use strict";
+
+//Navigation
+const navigation = [
+  {
+    title: "Home",
+    to: "#"
+  },
+  {
+    title: "About",
+    to: "#about_me"
+  },
+  {
+    title: "Services",
+    to: "#services"
+  },
+  {
+    title: "Portfolio",
+    to: "#portfolio"
+  },
+  {
+    title: "Testimonial",
+    to: "#testimonial"
+  },
+  {
+    title: "Blog",
+    to: "#blog"
+  },
+  {
+    title: "Contact",
+    to: "#contact"
+  }
+];
+
 // Services
 const services = [
   {
@@ -39,6 +72,30 @@ const services = [
   }
 ];
 // Skills
+
+// progress-barr
+const ProgressBar = [
+  {
+    number: '6',
+    title: 'Years of Expirience'
+  },
+  {
+    number: '2256',
+    title: 'Projects Done'
+  },
+  {
+    number: '1326',
+    title: 'Happy Clients'
+  },
+  {
+    number: '135',
+    title: 'Sad Clients'
+  },
+  {
+    number: '126',
+    title: 'Angry Clients'
+  }
+]
 
 //Portfolio
 
