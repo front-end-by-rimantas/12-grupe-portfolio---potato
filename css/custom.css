@@ -305,51 +305,6 @@ h5.no-decoration::before, h5.no-decoration::after {
   width: 100%;
 }
 
-.progres-br {
-  background-image: url(/img/dot.png);
-  background-repeat: repeat;
-}
-
-.progres-br .progr-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-weight: 500;
-  line-height: 60px;
-  height: 80px;
-  border-radius: 50px;
-}
-
-.progres-br .progres-numbr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  height: 60px;
-  width: 60px;
-  border-radius: 50px;
-  margin-left: 10px;
-  margin-right: 20px;
-  font-weight: 600;
-}
-
-.progres-br .no-decoration {
-  color: var(--primary-color-anti);
-}
-
 #blog .blogpost {
   background-color: white;
   -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);

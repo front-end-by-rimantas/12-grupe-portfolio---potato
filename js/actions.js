@@ -1,5 +1,3 @@
-"use strict";
-
 renderNav(navigation);
 headerPosition();
 mobileActions();
@@ -8,3 +6,7 @@ window.addEventListener("scroll", updateOnScroll);
 
 renderServices(services);
 renderBlogpost(blog);
+// brogress bar
+renderBrogressBar( ProgressBar );
+autoCounter();
+
