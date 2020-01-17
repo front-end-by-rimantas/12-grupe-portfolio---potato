@@ -6,6 +6,7 @@
   background-color: var(--primary-text-color);
   border: solid 2px var(--primary-text-color);
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .btn:hover {

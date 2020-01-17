@@ -231,37 +231,6 @@ h5 {
 .facts-img {
   width: 100%;
 }
-// preogresss bariukas
-.progres-br {
-  background-image: url(/img/dot.png);
-  background-repeat: repeat;
-
-  .progr-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-weight: 500;
-    line-height: 60px;
-    height: 80px;
-    border-radius: 50px;
-  }
-  .progres-numbr {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    margin-left: 10px;
-    margin-right: 20px;
-    font-weight: 600;
-  }
-  .no-decoration {
-    color: var(--primary-color-anti);
-  }
-}
 // skills
 
 // gallery

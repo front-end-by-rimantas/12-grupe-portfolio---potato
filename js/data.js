@@ -73,6 +73,30 @@ const services = [
 ];
 // Skills
 
+// progress-barr
+const ProgressBar = [
+  {
+    number: '6',
+    title: 'Years of Expirience'
+  },
+  {
+    number: '2256',
+    title: 'Projects Done'
+  },
+  {
+    number: '1326',
+    title: 'Happy Clients'
+  },
+  {
+    number: '135',
+    title: 'Sad Clients'
+  },
+  {
+    number: '126',
+    title: 'Angry Clients'
+  }
+]
+
 //Portfolio
 
 //Testimonials
