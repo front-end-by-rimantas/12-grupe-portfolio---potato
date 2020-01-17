@@ -2,12 +2,8 @@
 //Update on scroll
 function updateOnScroll() {
   headerPosition();
-}
-
-function updateOnScroll() {
   autoCounter();
 }
-
 
 //Nav
 function renderNav(data) {
