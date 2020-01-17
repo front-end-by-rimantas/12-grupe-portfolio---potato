@@ -1,4 +1,8 @@
 "use strict";
+//Update on scroll
+function updateOnScroll() {
+  headerPosition();
+}
 
 function updateOnScroll() {
   autoCounter();
@@ -6,6 +10,77 @@ function updateOnScroll() {
 
 
 //Nav
+function renderNav(data) {
+  if (!Array.isArray(data)) {
+    return console.error("ERROR: Incorrect navigation data format.");
+  }
+  if (data.length === 0) {
+    return console.error("ERROR: Navigation data array is empty");
+  }
+
+  let HTML = "";
+  const targetDOM = document.querySelector("#main_header > .row nav");
+
+  for (let i = 0; i < data.length; i++) {
+    const navItem = data[i];
+    HTML += `<a href="${navItem.to}">${navItem.title}<span></span></a>`;
+  }
+
+  targetDOM.innerHTML = HTML;
+}
+
+function removeActive() {
+  document
+    .querySelector(`#main_header > .row nav > a.active`)
+    .classList.remove("active");
+}
+
+function headerPosition() {
+  if (window.scrollY > 180) {
+    document.querySelector("#main_header").classList.add("header-fixed");
+  } else {
+    document.querySelector("#main_header").classList.remove("header-fixed");
+  }
+
+  let sectionsHeights = [];
+  for (let i = 0; i < navigation.length; i++) {
+    const link = navigation[i].to;
+    if (link === "#") {
+      sectionsHeights.push(0);
+    } else {
+      const section = document.querySelector(link);
+      sectionsHeights.push(section.offsetTop);
+    }
+  }
+
+  const headerHeight = document.querySelector("#main_header").offsetHeight;
+  const height = window.scrollY + headerHeight;
+  let activeSection = 0;
+  for (let i = 0; i < sectionsHeights.length; i++) {
+    const currentHeight = sectionsHeights[i];
+    if (currentHeight <= height) {
+      activeSection = i;
+    } else {
+      break;
+    }
+  }
+
+  if (document.querySelector(`#main_header > .row nav > a.active`) === null) {
+    document
+      .querySelector(
+        `#main_header > .row nav > a[href="${navigation[activeSection].to}"]`
+      )
+      .classList.add("active");
+  } else {
+    removeActive();
+
+    document
+      .querySelector(
+        `#main_header > .row nav > a[href="${navigation[activeSection].to}"]`
+      )
+      .classList.add("active");
+  }
+}
 //Nav end
 
 // Services
