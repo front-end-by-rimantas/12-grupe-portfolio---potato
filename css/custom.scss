@@ -183,6 +183,7 @@ h5 {
         padding: 20px 0;
         background: var(--primary-color);
         transform: translateY(360px);
+        transition: transition 10s;
 
         a {
           margin-left: calc(50% - 400px);

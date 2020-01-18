@@ -196,6 +196,10 @@ h5.no-decoration::before, h5.no-decoration::after {
     background: var(--primary-color);
     -webkit-transform: translateY(360px);
             transform: translateY(360px);
+    -webkit-transition: -webkit-transition 10s;
+    transition: -webkit-transition 10s;
+    transition: transition 10s;
+    transition: transition 10s, -webkit-transition 10s;
   }
   #main_header .row .col-12.on-mobile nav a {
     margin-left: calc(50% - 400px);
