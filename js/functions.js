@@ -29,9 +29,30 @@ function mobileActions() {
   const mobileMenu = document.querySelector(`#main_header > .row .mobile-menu`);
   const headerNav = document.querySelector("#main_header > .row .col-12");
 
-  mobileMenu.addEventListener("click", () =>
-    headerNav.classList.toggle("on-mobile")
+  mobileMenu.addEventListener("click", handleMenuClick);
+}
+
+function handleMenuClick() {
+  const headerNav = document.querySelector("#main_header > .row .col-12");
+  const onMobile = document.querySelector(
+    "#main_header > .row .col-12.res_menu_on"
   );
+  const offMobile = document.querySelector(
+    "#main_header > .row .col-12.res_menu_off"
+  );
+
+  if (onMobile) {
+    headerNav.classList.remove("res_menu_on");
+    headerNav.classList.add("res_menu_off");
+    setTimeout(() => {
+      headerNav.classList.remove("res_menu_off");
+    }, 1500);
+  } else if (offMobile) {
+    headerNav.classList.add("res_menu_on");
+    headerNav.classList.remove("res_menu_off");
+  } else {
+    headerNav.classList.add("res_menu_on");
+  }
 }
 
 function removeActive() {

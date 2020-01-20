@@ -106,6 +106,7 @@ h5 {
 #main_header {
   padding: 0;
   height: 60px;
+  z-index: 999;
 
   .row {
     margin: 0;
@@ -116,6 +117,9 @@ h5 {
       justify-content: space-between;
 
       .mobile-menu {
+        display: none;
+      }
+      .mobile-bg {
         display: none;
       }
 
@@ -158,22 +162,18 @@ h5 {
     }
   }
   @media (max-width: 1100px) {
-    background: var(--primary-color);
-
-    .row > .col-12 > .mobile-menu {
-      display: block;
-      font-size: 30px;
-      margin-right: 30px;
-      cursor: pointer;
-    }
-
-    .row > .col-12 > nav {
-      display: none;
-    }
-
-    .row .col-12.on-mobile {
+    .row > .col-12 {
+      .mobile-menu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 3;
+      }
+      img {
+        z-index: 3;
+      }
       nav {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
         align-items: flex-start;
@@ -182,30 +182,56 @@ h5 {
         left: 0;
         padding: 20px 0;
         background: var(--primary-color);
-        transform: translateY(360px);
-        transition: transition 10s;
+        z-index: 1;
 
         a {
           margin-left: calc(50% - 400px);
         }
       }
+      .mobile-bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        background: var(--primary-color);
+        z-index: 2;
+      }
+    }
+
+    .row > .col-12.res_menu_on {
+      nav {
+        display: flex;
+        animation: slide 1.5s ease;
+        animation-fill-mode: forwards;
+      }
+    }
+    .row > .col-12.res_menu_off {
+      nav {
+        display: flex;
+        animation: slideUp 1.5s ease;
+      }
     }
   }
 
   @media (max-width: 900px) {
-    .row > .col-12.on-mobile > nav > a {
+    .row > .col-12.res_menu_on > nav > a {
       margin-left: calc(50% - 250px);
     }
   }
 
   @media (max-width: 600px) {
-    .row > .col-12.on-mobile {
+    .row .col-12 {
       img {
         margin-left: 10px;
       }
       .mobile-menu {
         margin-right: 20px;
       }
+    }
+
+    .row .col-12.res_menu_on {
       nav {
         display: flex;
         align-items: center;
@@ -217,12 +243,29 @@ h5 {
   }
 }
 
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(360px);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(360px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 #main_header.header-fixed {
   position: fixed;
   top: -70px;
   background: var(--primary-color);
-  z-index: 99;
-  transform: translateY(70px);
+  transform: translateY(69px);
   transition: transform 0.7s;
 
   .row > .col-12 > nav {
