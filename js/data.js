@@ -76,29 +76,71 @@ const services = [
 // progress-barr
 const ProgressBar = [
   {
-    number: '6',
-    title: 'Years of Expirience'
+    number: "6",
+    title: "Years of Expirience"
   },
   {
-    number: '2256',
-    title: 'Projects Done'
+    number: "2256",
+    title: "Projects Done"
   },
   {
-    number: '1326',
-    title: 'Happy Clients'
+    number: "1326",
+    title: "Happy Clients"
   },
   {
-    number: '135',
-    title: 'Sad Clients'
+    number: "135",
+    title: "Sad Clients"
   },
   {
-    number: '126',
-    title: 'Angry Clients'
+    number: "126",
+    title: "Angry Clients"
   }
-]
+];
 
 //Portfolio
 
+const potatofolio = [
+  {
+    image: "1.jpg",
+    title: "Amazing Mockup Design For Client",
+    category: ["Design", "Development"]
+  },
+  {
+    image: "2.jpg",
+    title: "This is Awesome photography",
+    category: ["Development", "Mockup"]
+  },
+  {
+    image: "3.jpg",
+    title: "Creative Designs For Client",
+    category: ["Design", "Mockup", "Photography"]
+  },
+  {
+    image: "4.jpg",
+    title: "WP Development For My Clients",
+    category: ["Design", "Development"]
+  },
+  {
+    image: "5.jpg",
+    title: "PHP Development For My Client",
+    category: ["Photography", "Development", "Mockup"]
+  },
+  {
+    image: "6.jpg",
+    title: "Extraordinary Image Caption",
+    category: ["Photography"]
+  },
+  {
+    image: "7.jpg",
+    title: "Unique Showcase Design",
+    category: ["Design", "Photography", "Mockup"]
+  },
+  {
+    image: "8.jpg",
+    title: "Retouch Products Fpr Buyer",
+    category: ["Photography"]
+  }
+];
 //Testimonials
 
 //Blog

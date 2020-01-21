@@ -115,11 +115,11 @@ function renderServices(data) {
   const iconCircles = targetDOM.querySelectorAll(".circle");
 
   for (let i = 0; i < serviceItems.length; i++) {
-    serviceItems[i].addEventListener("mouseover", e => {
+    serviceItems[i].addEventListener("mouseover", (e) => {
       iconCircles[i].classList.add("play");
     });
 
-    serviceItems[i].addEventListener("mouseout", e => {
+    serviceItems[i].addEventListener("mouseout", (e) => {
       iconCircles[i].classList.remove("play");
     });
   }
@@ -197,6 +197,48 @@ function autoCounter() {
 //Progress end
 
 //Portfolio
+
+function renderGallery(target, data) {
+  let HTML = "";
+  // Target apsaugos
+
+  // ggalerijos apsaugos
+  if (!Array.isArray(data)) {
+    return console.error("ERROR: Incorrect services Gallery data format.");
+  }
+  if (data.length === 0) {
+    return console.error("ERROR: Services Gallery data array is empty");
+  }
+  // ggalerijos filtras
+  let filterHTML = "Gallery Filter";
+
+  // ggalerijos fotos
+
+  let listHTML = "";
+  for (let i = 0; i < data.length; i++) {
+    const work = data[i];
+    listHTML += `<div class="gallery-item">
+                  Gallery item ${i + 1}
+                  </div>`;
+  }
+
+  // cia galutine galerija ir istatyta
+
+  HTML = `<div class="gallery">
+            <div class="gallery_filter">
+              ${filterHTML}
+            </div>
+            <div class="gallery_list">
+              ${listHTML}
+            </div>
+        </div>`;
+
+  document.querySelector(target).innerHTML = HTML;
+
+  // event Listener ant filtro
+  return;
+}
+
 //Portfolio end
 
 //Testimonial
@@ -214,7 +256,7 @@ function renderBlogpost(data) {
   let HTML = "";
   const targetDOM = document.querySelector("#blog_posts");
 
-  const generateTags = tags => {
+  const generateTags = (tags) => {
     if (!Array.isArray(tags)) {
       return console.error("ERROR: Incorrect blogpost.tags data format.");
     }
@@ -259,3 +301,10 @@ function renderBlogpost(data) {
   targetDOM.innerHTML = HTML;
 }
 //Blog end
+
+// for (let i = 0; i < data.length; i++) {
+//   const stuff = data[i];
+//   HTML += `<div class="gallery-item">
+//               gallery ITEM
+//               </div>`;
+// }
