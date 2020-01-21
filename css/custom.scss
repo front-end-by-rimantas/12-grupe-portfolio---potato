@@ -216,7 +216,7 @@ h5 {
   }
 
   @media (max-width: 900px) {
-    .row > .col-12.res_menu_on > nav > a {
+    .row > .col-12 > nav > a {
       margin-left: calc(50% - 250px);
     }
   }
@@ -231,7 +231,7 @@ h5 {
       }
     }
 
-    .row .col-12.res_menu_on {
+    .row .col-12 {
       nav {
         display: flex;
         align-items: center;

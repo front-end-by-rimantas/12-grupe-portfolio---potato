@@ -228,7 +228,7 @@ h5.no-decoration::before, h5.no-decoration::after {
 }
 
 @media (max-width: 900px) {
-  #main_header .row > .col-12.res_menu_on > nav > a {
+  #main_header .row > .col-12 > nav > a {
     margin-left: calc(50% - 250px);
   }
 }
@@ -240,7 +240,7 @@ h5.no-decoration::before, h5.no-decoration::after {
   #main_header .row .col-12 .mobile-menu {
     margin-right: 20px;
   }
-  #main_header .row .col-12.res_menu_on nav {
+  #main_header .row .col-12 nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,7 +248,7 @@ h5.no-decoration::before, h5.no-decoration::after {
         -ms-flex-align: center;
             align-items: center;
   }
-  #main_header .row .col-12.res_menu_on nav a {
+  #main_header .row .col-12 nav a {
     margin-left: 10px;
   }
 }
