@@ -36,6 +36,12 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
+
 h4 {
   font-size: 21px;
   line-height: 32px;
@@ -98,6 +104,93 @@ h5.no-decoration::before, h5.no-decoration::after {
 
 .pb-50 {
   padding-bottom: 50px;
+}
+
+#main_header {
+  padding: 0;
+  height: 60px;
+}
+
+#main_header .row {
+  margin: 0;
+}
+
+#main_header .row .col-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main_header .row .col-12 nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--primary-color-anti);
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0.6px 0 0 var(--primary-color-anti);
+}
+
+#main_header .row .col-12 nav a.active::before {
+  width: 8px;
+  height: 8px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid;
+  border-color: var(--primary-color-anti) transparent transparent var(--primary-color-anti);
+}
+
+#main_header .row .col-12 nav a.active::after {
+  width: 8px;
+  height: 8px;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 2px solid;
+  border-color: transparent var(--primary-color-anti) var(--primary-color-anti) transparent;
+}
+
+#main_header.header-fixed {
+  position: fixed;
+  top: -70px;
+  background: var(--primary-color);
+  z-index: 99;
+  -webkit-transform: translateY(70px);
+          transform: translateY(70px);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a:hover {
+  color: #fff;
+  text-shadow: 0.5px 0 0 #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active {
+  color: #fff;
+  text-shadow: 0.5px 0 0 #fff;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active::before {
+  border-color: #fff transparent transparent #fff;
+}
+
+#main_header.header-fixed .row > .col-12 > nav a.active::after {
+  border-color: transparent #fff #fff transparent;
 }
 
 #hero {
@@ -164,19 +257,101 @@ h1 {
   }
 }
 
-.fac-img {
+.facts-img {
   width: 100%;
 }
 
-.contact-title {
+#blog .blogpost {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  background-size: 100% 2px;
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+}
+
+#blog .blogpost img {
+  width: 100%;
+}
+
+#blog .blogpost .content {
+  padding: 30px;
+}
+
+#blog .blogpost .content a {
+  text-decoration: none;
+}
+
+#blog .blogpost .content .tag {
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
+#blog .blogpost .content .tag a {
+  font-style: italic;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content .tag a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: var(--primary-color-anti);
+}
+
+#blog .blogpost .content h5 {
+  color: var(--primary-color-anti);
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#blog .blogpost .content h5:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: var(--primary-text-color);
+}
+
+#blog .blogpost .content p {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+#blog .blogpost .content .date-coment {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#blog .blogpost .content .date-coment span {
+  color: var(--primary-text-color);
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+}
+
+#contact img {
+  width: 100%;
+}
+
+#contact .contact-title {
   max-width: 500px;
 }
 
-.contact-img {
-  width: 100%;
-}
-
-.form-input {
+#contact form > .form-input {
   font-size: 13px;
   line-height: 36px;
   border-radius: 5px;
@@ -188,18 +363,23 @@ h1 {
   outline: none;
 }
 
-form > textarea {
-  resize: none;
-  width: 100%;
-}
-
-.form-input:focus {
+#contact form > .form-input:focus {
   border: 1px solid var(--secondary-text-color);
   -webkit-transition: border-color 0.2s ease-in-out;
   transition: border-color 0.2s ease-in-out;
 }
 
+#contact form > textarea {
+  resize: none;
+  width: 100%;
+}
+
 .socials {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.socials .socials-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,14 +388,15 @@ form > textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 75px;
 }
 
-.socials > a {
+.socials .socials-icons > a {
   display: inline-block;
   font-size: 16px;
   height: 50px;
   width: 50px;
-  margin-left: 4px;
+  margin-right: 4px;
   color: white;
   text-align: center;
   padding: 15px;
@@ -224,7 +405,7 @@ form > textarea {
   border-radius: 50px;
 }
 
-.socials > a:hover {
+.socials .socials-icons > a:hover {
   color: var(--primary-text-color);
   background-color: white;
   border: solid 2px var(--primary-text-color);
@@ -232,23 +413,33 @@ form > textarea {
   transition: 0.4s;
 }
 
-.socials > .fa {
+.socials .fa {
   display: inline-block;
-  font-size: 20px;
 }
 
-.container.bg-primary {
+@media (max-width: 1100px) {
+  .socials .col-md-6 {
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.footer .container.bg-primary {
   padding: 6px 0;
   font-size: 40px;
 }
 
-.container.bg-primary p {
+.footer .container.bg-primary p {
   line-height: 30px;
   font-size: 18px;
   color: black;
 }
 
-.wt {
+.footer .wt {
   color: white;
   text-decoration: none;
 }

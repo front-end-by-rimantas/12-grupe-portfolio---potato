@@ -35,6 +35,11 @@ h2 {
   font-weight: 800;
 }
 
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 700;
+}
 h4 {
   font-size: 21px;
   line-height: 32px;
@@ -98,6 +103,84 @@ h5 {
   padding-bottom: 50px;
 }
 // header
+#main_header {
+  padding: 0;
+  height: 60px;
+
+  .row {
+    margin: 0;
+
+    .col-12 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      nav {
+        a {
+          position: relative;
+          text-decoration: none;
+          color: var(--primary-color-anti);
+          padding: 8px 14px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-shadow: 0.6px 0 0 var(--primary-color-anti);
+
+          &.active::before {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 2px solid;
+            border-color: var(--primary-color-anti) transparent transparent
+              var(--primary-color-anti);
+          }
+
+          &.active::after {
+            width: 8px;
+            height: 8px;
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 2px solid;
+            border-color: transparent var(--primary-color-anti)
+              var(--primary-color-anti) transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main_header.header-fixed {
+  position: fixed;
+  top: -70px;
+  background: var(--primary-color);
+  z-index: 99;
+  transform: translateY(70px);
+  transition: transform 0.7s;
+
+  .row > .col-12 > nav {
+    a:hover {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      transition: 0.5s;
+    }
+    a.active {
+      color: #fff;
+      text-shadow: 0.5px 0 0 #fff;
+      &::before {
+        border-color: #fff transparent transparent #fff;
+      }
+      &::after {
+        border-color: transparent #fff #fff transparent;
+      }
+    }
+  }
+}
 
 // hero
 #hero {
@@ -168,8 +251,7 @@ h5 {
 // achievements
 
 // Important facts
-
-.fac-img {
+.facts-img {
   width: 100%;
 }
 // skills
@@ -182,78 +264,171 @@ h5 {
 
 // testimonials
 
+// blog
+#blog {
+  .blogpost {
+    background-color: white;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--primary-color);
+    background-size: 100% 2px;
+    background-position: bottom 0 left 0;
+    background-repeat: no-repeat;
+    img {
+      width: 100%;
+    }
+
+    .content {
+      padding: 30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .tag {
+        margin-bottom: 15px;
+        color: var(--primary-text-color);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+
+        a {
+          font-style: italic;
+          letter-spacing: 1px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 800;
+          color: var(--primary-text-color);
+        }
+
+        a:hover {
+          transition: 0.5s;
+          color: var(--primary-color-anti);
+        }
+      }
+
+      h5 {
+        color: var(--primary-color-anti);
+        margin-bottom: 15px;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      h5:hover {
+        transition: 0.5s;
+        color: var(--primary-text-color);
+      }
+
+      p {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .date-coment {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        span {
+          color: var(--primary-text-color);
+          font-style: italic;
+          letter-spacing: 1px;
+          line-height: 16px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
 // contact me
-.contact-title {
-  max-width: 500px;
+#contact {
+  img {
+    width: 100%;
+  }
+
+  .contact-title {
+    max-width: 500px;
+  }
+
+  form {
+    > .form-input {
+      font-size: 13px;
+      line-height: 36px;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      border: none;
+      border: 1px solid #ced4da;
+      outline: none;
+
+      &:focus {
+        border: 1px solid var(--secondary-text-color);
+        transition: border-color 0.2s ease-in-out;
+      }
+    }
+  }
+
+  form > textarea {
+    resize: none;
+    width: 100%;
+  }
 }
 
-.contact-img {
-  width: 100%;
-}
-
-.form-input {
-  font-size: 13px;
-  line-height: 36px;
-  border-radius: 5px;
-  width: 100%;
-  padding: 0 15px;
-  margin-bottom: 15px;
-  border: none;
-  border: 1px solid #ced4da;
-  outline: none;
-}
-
-form > textarea {
-  resize: none;
-  width: 100%;
-}
-
-.form-input:focus {
-  border: 1px solid var(--secondary-text-color);
-  transition: border-color 0.2s ease-in-out;
-}
 // footer
 .socials {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  .socials-icons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 75px;
 
-  > a {
+    > a {
+      display: inline-block;
+      font-size: 16px;
+      height: 50px;
+      width: 50px;
+      margin-right: 4px;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      background-color: var(--primary-text-color);
+      border: solid 2px var(--primary-text-color);
+      border-radius: 50px;
+    }
+    > a:hover {
+      color: var(--primary-text-color);
+      background-color: white;
+      border: solid 2px var(--primary-text-color);
+      transition: 0.4s;
+    }
+  }
+  .fa {
     display: inline-block;
-    font-size: 16px;
-    height: 50px;
-    width: 50px;
-    margin-left: 4px;
+  }
+
+  @media (max-width: 1100px) {
+    .col-md-6 {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.footer {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  .container.bg-primary {
+    padding: 6px 0;
+    font-size: 40px;
+  }
+  .container.bg-primary p {
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+  }
+  .wt {
     color: white;
-    text-align: center;
-    padding: 15px;
-    background-color: var(--primary-text-color);
-    border: solid 2px var(--primary-text-color);
-    border-radius: 50px;
+    text-decoration: none;
   }
-  > a:hover {
-    color: var(--primary-text-color);
-    background-color: white;
-    border: solid 2px var(--primary-text-color);
-    transition: 0.4s;
-  }
-}
-
-.socials > .fa {
-  display: inline-block;
-  font-size: 20px;
-}
-
-.container.bg-primary {
-  padding: 6px 0;
-  font-size: 40px;
-}
-.container.bg-primary p {
-  line-height: 30px;
-  font-size: 18px;
-  color: black;
-}
-.wt {
-  color: white;
-  text-decoration: none;
 }
